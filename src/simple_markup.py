@@ -16,4 +16,6 @@ for block in blocks(sys.stdin):
     else:
         print '<p>'
         print block
-        print '</body></html>'
+        print '</p>'
+
+print '</body></html>'
