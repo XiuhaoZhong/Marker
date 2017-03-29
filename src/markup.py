@@ -20,7 +20,6 @@ class Parser:
 
     def addFilter(self, pattern, name):
         def filter(block, handler):
-            print "Here is filter function: block is " + block
             return re.sub(pattern, handler.sub(name), block)
         self.filters.append(filter)
 
