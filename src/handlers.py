@@ -14,8 +14,8 @@ class Handler:
             result = self.callback('sub_', name, match)
             if result is None:
                 result = match.group(0)
-                return result
-            return substitution
+            return result
+        return substitution
 
 class HTMLRenderer(Handler):
     """
@@ -61,10 +61,10 @@ class HTMLRenderer(Handler):
         print '</h1>'
 
     def sub_emphasis(self, match):
-        return '<em>%s</em>' % match.group(1)
+        return '<em>%s</em>' % (match.group(1))
 
     def sub_url(self, match):
-        return '<a href="%s">%s</a>' (match.group(1), match.group(1))
+        return '<a href="%s">%s</a>' % (match.group(1), match.group(1))
 
     def sub_mail(self, match):
         return '<a href="mailto:%s">%s</a>' % (match.group(1), match.group(1))
