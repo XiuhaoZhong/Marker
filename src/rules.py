@@ -37,7 +37,6 @@ class ListItemRule(Rule):
         return block[0] == '-'
     def action(self, block, handler):
         handler.start(self.type)
-        print "here is in listitem rule" + block
         handler.feed(block[1:].strip())
         handler.end(self.type)
         return True

@@ -54,7 +54,7 @@ class HTMLRenderer(Handler):
     def end_listitem(self):
         print '</li>'
 
-    def start_tile(self):
+    def start_title(self):
         print '<h1>'
 
     def end_title(self):
